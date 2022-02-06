@@ -1,12 +1,26 @@
-from flask import Flask  # Импортируем главный класс WCGI-приложения
+from flask import Flask
 
-app = Flask(__name__)  # Создаем объект приложения и записываем его в переменную
-
-
-@app.route('/')  # Декоратор, описывающий URL на сервере
-def hello():    # Функция представления
-    return 'Hello, World!'    # вернуть текст!
+app = Flask(__name__)
 
 
-if __name__ == '__main__':  # Запускаем сервер, только если файл запускается напрямую
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
+
+@app.route('/index')
+def index():  # возвращаем HTML-код
+    return '''
+    <html>
+      <head>
+        <title>Flask Server</title>
+      </head>
+      <body>
+        <h1>Hello, World!</h1>
+      </body>
+    </html>
+    '''
+
+
+if __name__ == '__main__':
     app.run()
