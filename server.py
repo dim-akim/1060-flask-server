@@ -1,25 +1,19 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
+    return """
+    <h1>Добро пожаловать на сервер flask-server</h1>
+    Ссылка на <a href="index">index</a> страницу<br>
+    """
 
 
 @app.route('/index')
-def index():  # возвращаем HTML-код
-    return '''
-    <html>
-      <head>
-        <title>Flask Server</title>
-      </head>
-      <body>
-        <h1>Hello, World!</h1>
-      </body>
-    </html>
-    '''
+def index():  # возвращаем отображение шаблона
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
