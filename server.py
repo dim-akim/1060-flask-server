@@ -12,8 +12,9 @@ def hello():
 
 
 @app.route('/index')
-def index():  # возвращаем отображение шаблона
-    return render_template('index.html')
+def index():
+    user = {'username': 'dim-akim'}
+    return render_template('index.html', **user)  # передаем в шаблон именованный параметр username='dim-akim'
 
 
 if __name__ == '__main__':
