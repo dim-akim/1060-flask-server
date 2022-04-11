@@ -1,13 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask
+from flask import render_template
+from flask import url_for
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello():
-    return """
+    return f"""
     <h1>Добро пожаловать на сервер flask-server</h1>
-    Ссылка на <a href="index">index</a> страницу<br>
+    Ссылка на <a href="{url_for('index')}">index</a> страницу<br>
     """
 
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Сайт начинающего верстальщика</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
     <header>
@@ -11,7 +11,7 @@
     </header>
     <main>
       <div class="avatar-container">
-        <img class="avatar" src="img/raccoon.svg" width="80" height="80" alt="Аватарка">
+        <img class="avatar" src="{{ url_for('static', filename='img/raccoon.svg') }}" width="80" height="80" alt="Аватарка">
       </div>
       <nav class="blog-navigation">
         <h2>Записи в блоге</h2>
