@@ -19,5 +19,15 @@ def index():
     return render_template('index.html', **user)  # передаем в шаблон именованный параметр username='dim-akim'
 
 
+@app.route('/day-<num>')
+def day(num):
+    return render_template(f'day-{num}.html')
+
+
+@app.route('/photo-<num>')
+def photo(num):
+    return render_template(f'photo-{num}.html')
+
+
 if __name__ == '__main__':
     app.run()

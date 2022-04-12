@@ -28,6 +28,7 @@
 * [Урок 3](lessons/all-lessons.md#lesson-3) - Используем готовые HTML-страницы
 * [Урок 4](lessons/all-lessons.md#lesson-4) - Настройки и шаблонизатор
 * [Урок 5](lessons/all-lessons.md#lesson-5) - Создаем ссылки с помощью url_for
+* [Урок 6](lessons/all-lessons.md#lesson-6) - Используем переменную в URL-адресе
 
 
 [html-academy-link]: https://htmlacademy.ru/ "Обучение HTML и CSS"
