@@ -1,0 +1,11 @@
+name: flask-skolca
+
+services:
+  flask:
+    build: .
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    volumes:
+      - ./templates:/app/templates
+      - ./static:/app/static
